@@ -60,10 +60,15 @@ public class IntegerScalar  implements Scalar{
  
     @Override
     public boolean equals(Object o){
-        if(!(o instanceof IntegerScalar)){
-            return false;
+        if(o instanceof IntegerScalar){
+            return ((IntegerScalar)o).getNumber() == this.getNumber();
         }
-        return ((IntegerScalar)o).getNumber() == this.getNumber();
+        if(o instanceof RationalScalar){
+            RationalScalar rationalO = (((RationalScalar)o).reduce());
+            return rationalO.getNumerator() == this.getNumber() && rationalO.getDenominator() == 1;
+        }
+        return false;
+        
     }
 
     public String toString(){

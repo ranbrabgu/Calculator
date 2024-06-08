@@ -3,15 +3,11 @@ package calculator;
 public class testing {
     public static void main(String[] args) {
         System.out.println("in main");
+        Polynomial p1 = Polynomial.build("1 5 2/3 8 4/3 4/3 28 1/1 4/4");
 
-        Polynomial p;
-        Polynomial p1 = p.build("2/3");
-        Polynomial p2 = p.build("5 2/3 8 4/3 4/3 28 1/1 4/4 1");
-        
         
         System.out.println(p1);
-        System.out.println(p2);
-        //System.out.println(p1.add(p2));
+        System.out.println("+1 +5x +2/3^2 +8x^3 +4/3x^4 +4/3x^5 +28x^6 +x^7 +x^8");
         
         // ---evaluating valuse---
         // [1,5,2/3,8,4/3,4/3,28,1/1,4/4]

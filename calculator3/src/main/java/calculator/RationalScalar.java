@@ -55,7 +55,7 @@ public class RationalScalar implements Scalar{
     @Override
     public int sign(){
         int NumSign = java.lang.Integer.compare(getNumerator(), 0);
-        int DenSign = java.lang.Integer.compare(getNumerator(), 0);
+        int DenSign = java.lang.Integer.compare(getDenominator(), 0);
 
         return NumSign*DenSign;
     }

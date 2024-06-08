@@ -66,9 +66,9 @@ public class Polynomial{
     }
 
 
-    public Polynomial derivative(Polynomial p){
-        Polynomial res= new Polynomial();
-        for (Monomial m : p.monomials) {
+    public Polynomial derivative(){
+        Polynomial res = new Polynomial();
+        for (Monomial m : this.monomials) {
             res.monomials.add(m.derivative());
         }
         return res;
